@@ -1,4 +1,5 @@
 "use client";
+
 export default function PeepTrait({ params }){
     console.log(params)
     return(

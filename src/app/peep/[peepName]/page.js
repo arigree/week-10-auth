@@ -3,6 +3,8 @@
 import Link from "next/link";
 
 export default function PeepNamePage({ params }){
+    const { peepName } = params;
+
 return(
     <main>
         <h1>Peep Name:</h1>
