@@ -1,16 +1,19 @@
 "use client";
 import { useState} from 'react';
+import { useRouter } from 'next/compat/router';
 
 
 
 export default function PeepPage(){
     const [peepName, setPeepName] = useState("");
+    const router = useRouter();
 
     function changePeepName(e){
         setPeepName(e.currentTarget.value);
     }
     function goToPeep(){
-        console.log(peepName)
+        router.push(`/peeps/${peepName}`);
+        
     }
     return(
         <main>
